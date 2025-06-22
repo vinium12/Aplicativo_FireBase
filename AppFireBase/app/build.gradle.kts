@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    // Adicione o plugin do Google Services para o Firebase
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -49,6 +51,15 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    // --- Dependências adicionadas do projeto antigo ---
+    implementation(libs.androidx.navigation.compose) // Se você usa navegação Compose
+    implementation(libs.firebase.auth) // Para autenticação Firebase
+    implementation(libs.androidx.runtime.livedata) // Se você usa LiveData
+    implementation(libs.androidx.credentials) // Para a API de Credenciais
+    implementation(libs.androidx.credentials.play.services.auth) // Para integração com Google Play Services Auth
+    implementation(libs.googleid) // Pode ser necessário para autenticação com Google
+    // --- Fim das dependências adicionadas ---
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
