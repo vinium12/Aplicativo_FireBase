@@ -64,9 +64,7 @@ class AuthViewModel : ViewModel() {
         _authState.value = AuthState.Unauthenticated
     }
 
-
 }
-
 
 sealed class AuthState{
     object Authenticated : AuthState()
@@ -74,3 +72,5 @@ sealed class AuthState{
     object Loading : AuthState()
     data class Error(val message : String) : AuthState()
 }
+
+

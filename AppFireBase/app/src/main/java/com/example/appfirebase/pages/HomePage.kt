@@ -38,7 +38,7 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, authVi
         when(authState.value){
             is AuthState.Unauthenticated -> navController.navigate("login")
             else -> Unit
-        }
+          }
     }
 
     Column(
